@@ -20,6 +20,8 @@ private const val TAG = "BlurWorker"
 class BlurWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx, params) {
 
     override suspend fun doWork(): Result {
+
+        // ADD THESE LINES
         val resourceUri = inputData.getString(KEY_IMAGE_URI)
         val blurLevel = inputData.getInt(KEY_BLUR_LEVEL, 1)
 
